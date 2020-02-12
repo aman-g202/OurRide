@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "872774410235",
+    "firebase_url": "https://ourride-38a07.firebaseio.com",
+    "project_id": "ourride-38a07",
+    "storage_bucket": "ourride-38a07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872774410235:android:0c04ce5439daa340",
+        "android_client_info": {
+          "package_name": "com.ourride.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872774410235-smqrr5pge15sjknoqsb3re0946rmfmpl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtsYQW-j1oX8QySJrs1Xk9vbkmPgqr8OA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872774410235-smqrr5pge15sjknoqsb3re0946rmfmpl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

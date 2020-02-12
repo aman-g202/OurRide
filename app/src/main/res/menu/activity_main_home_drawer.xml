@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/icDashBoard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/icProfile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/icMyBookings"
+            android:title="My Bookings" />
+        <item
+            android:id="@+id/icHistory"
+            android:title="History" />
+        <item
+            android:id="@+id/icShare"
+            android:title="Share" />
+        <item
+            android:id="@+id/icRideRequest"
+            android:title="Ride Request" />
+        <item
+            android:id="@+id/icRole"
+            android:title="Role" />
+        <item
+            android:id="@+id/icLogout"
+            android:title="Logout" />
+    </group>
+
+</menu>

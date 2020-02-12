@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ourride.driver">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_driver"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:name=".volley.AppController"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!--Activities of app-->
+        <activity android:name=".ui.activity.EditProfileActivity"></activity>
+        <activity android:name=".ui.activity.RiderequestActivity"></activity>
+        <activity android:name=".ui.activity.SelectionActivity"></activity>
+        <activity android:name=".ui.activity.WingmenListActivity"></activity>
+        <activity android:name=".ui.activity.WingmanDetailActivity"></activity>
+        <activity android:name=".ui.activity.WingmenActivity"></activity>
+        <activity android:name=".ui.activity.DriverMapActivity"></activity>
+        <activity android:name=".ui.activity.ShareAppActivity"></activity>
+        <activity
+            android:name=".ui.MainHomeActivity"
+            android:label="@string/title_activity_main_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+
+        <!-- Services of app -->
+        <service android:name=".services.DriverLocationService"/>
+
+        <service android:name=".services.LocationService"/>
+
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--Receivers of app-->
+        <receiver
+            android:name=".utils.NotificationReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".utils.Button_Listener_Accept">
+            <intent-filter>
+                <action android:name="button_click_accept"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".utils.Button_Listener_Reject">
+            <intent-filter>
+                <action android:name="button_click_reject"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".utils.Button_Listener_Accept_User">
+            <intent-filter>
+                <action android:name="button_click_accept_bookride"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".utils.Button_Listener_Reject_User">
+            <intent-filter>
+                <action android:name="button_click_reject_bookride"/>
+            </intent-filter>
+        </receiver>
+
+        <!--Work only for explict broadcast receiver only for android version less than oreo, use intent and sendbroadcast(intent)-->
+
+        <!--<receiver android:name=".receiver.MyBroadCastReceiver"  android:exported="true">-->
+            <!--<intent-filter>-->
+                <!--&lt;!&ndash;<action android:name="Intent.ACTION_POWER_CONNECTED"/>&ndash;&gt;-->
+                <!--<action android:name="com.journaldev.AN_INTENT" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+    </application>
+
+</manifest>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".driver.ui.activity.WingmanDetailActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:src="@drawable/ic_back"
+            android:id="@+id/back_arrow"
+            android:layout_gravity="center"
+            android:tint="@color/white"
+            android:layout_margin="4sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6"
+            android:text="Select Wingman"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_margin="2sp"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_nav_bar"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="130sp"
+                    android:layout_height="130sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:id="@+id/user_photo"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginBottom="6sp"
+                    android:background="@drawable/ic_icon" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="4sp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10sp"
+                    android:padding="4sp"
+                    android:hint="name here"
+                    android:id="@+id/user_name"
+                    android:textColor="@color/gray_a"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10sp"
+                    android:padding="4sp"
+                    android:hint="address here"
+                    android:id="@+id/user_address"
+                    android:textColor="@color/gray_a"
+                    android:textSize="16sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10sp"
+                        android:padding="4sp"
+                        android:hint="number here"
+                        android:layout_weight="1"
+                        android:id="@+id/phone1"
+                        android:textColor="@color/gray_a"
+                        android:textSize="16sp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="end"
+                        android:layout_margin="10sp"
+                        android:padding="4sp"
+                        android:text="Call"
+                        android:id="@+id/call1"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/gray_a"
+                        android:textSize="16sp"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phone2"
+                        android:layout_gravity="center"
+                        android:layout_margin="10sp"
+                        android:padding="4sp"
+                        android:hint="alternate number here"
+                        android:layout_weight="1"
+                        android:textColor="@color/gray_a"
+                        android:textSize="16sp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/call2"
+                        android:layout_gravity="center"
+                        android:gravity="end"
+                        android:layout_margin="10sp"
+                        android:padding="4sp"
+                        android:text="Call"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/gray_a"
+                        android:textSize="16sp"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/user_distance"
+                    android:layout_margin="10sp"
+                    android:padding="6sp"
+                    android:hint="distance here"
+                    android:textColor="@color/gray_a"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/user_duration"
+                    android:layout_margin="10sp"
+                    android:padding="6sp"
+                    android:hint="duration here"
+                    android:textColor="@color/gray_a"
+                    android:textSize="16sp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/select_wingman"
+                    android:layout_gravity="center"
+                    android:layout_margin="6sp"
+                    android:background="@color/colorPrimaryDark"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:text="Select Wingman"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
